@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAUL Bonapriso</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script>
+AOS.init();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+
+<!-- Loader -->
+
+<div id="loader">
+<div class="loader-logo">PAUL</div>
+</div>
+
+<!-- Header -->
+
+<header class="header">
+
+<nav class="navbar">
+
+<div class="logo">PAUL</div>
+
+<ul class="nav-menu">
+
+<li><a href="#home" class="active" data-lang="navHome">Home</a></li>
+<li><a href="#about" data-lang="navAbout">About</a></li>
+<li><a href="#menu" data-lang="navMenu">Menu</a></li>
+<li><a href="#gallery" data-lang="navGallery">Gallery</a></li>
+<li><a href="#contact" data-lang="navContact">Contact</a></li>
+
+</ul>
+<div class="language-switch">
+
+<img src="https://flagcdn.com/w40/fr.png"
+onclick="setLanguage('fr')"
+class="flag"
+alt="French">
+
+<img src="https://flagcdn.com/w40/gb.png"
+onclick="setLanguage('en')"
+class="flag"
+alt="English">
+
+</div>
+
+<a href="#reservation" class="nav-btn" data-lang="navReserve">
+Reserve Table
+</a>
+
+<div class="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+</nav>
+
+</header>
+
+<section id="home" class="hero">
+
+<div class="hero-overlay">
+
+<span class="hero-tagline" data-lang="heroTagline">Since 1889</span>
+
+<h1 class="hero-title" data-lang="heroTitle">
+PAUL Bonapriso
+</h1>
+
+<p class="hero-subtitle" data-lang="heroSubtitle">
+French Bakery • Gourmet Cuisine • Elegant Atmosphere
+</p>
+
+<div class="hero-divider"></div>
+
+<a href="#menu" class="hero-btn" data-lang="heroBtn">Explore Menu</a>
+
+<div class="scroll-indicator">
+↓
+</div>
+
+</div>
+
+</section>
+
+<section class="specialties">
+
+<h2 data-lang="specialtiesTitle">Our Specialties</h2>
+<p class="section-subtitle" data-lang="specialtiesSubtitle">
+Discover some of our most loved dishes prepared with
+fresh ingredients and authentic French tradition.
+</p>
+
+<div class="specialties-container">
+
+<div class="specialty-card">
+
+<img src="images/croissant.jpg" alt="Croissant">
+
+<h3 data-lang="croissantTitle">Butter Croissant</h3>
+
+<p data-lang="croissantText">
+Freshly baked croissant with rich French butter,
+perfect for breakfast.
+</p>
+
+</div>
+
+<div class="specialty-card">
+
+<img src="images/pizza.jpg" alt="Pizza">
+
+<h3 data-lang="pizzaTitle">Pizza Margherita</h3>
+
+<p data-lang="pizzaText">
+Classic pizza with tomato sauce and mozzarella.
+</p>
+
+</div>
+
+<div class="specialty-card">
+
+<img src="images/burger.jpg" alt="Burger">
+
+<h3 data-lang="burgerTitle">Classic Burger</h3>
+
+<p>
+Juicy beef burger served with crispy fries.
+</p>
+
+</div>
+
+<div class="specialty-card">
+
+<img src="images/salade.jpg" alt="Dessert">
+
+<h3 data-lang="burgerTitle">Chocolate Dessert</h3>
+
+<p data-lang="dessertTitle">
+Delicious chocolate pastry inspired by French pâtisserie.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="about" id="about">
+
+<div class="about-container">
+
+<div class="about-text">
+
+<h2 data-lang="aboutTitle">About PAUL</h2>
+
+<p data-lang="aboutText1">
+Founded in 1889, PAUL is a French bakery and restaurant brand
+known for its passion for traditional bread and refined cuisine.
+For generations, the family behind PAUL has preserved the art
+of French baking while creating delicious meals and pastries
+enjoyed around the world.
+</p>
+
+<p data-lang="aboutText2">
+At PAUL Bonapriso, we bring this heritage to Douala by offering
+freshly baked bread, gourmet sandwiches, pastries, and carefully
+prepared dishes. Every recipe reflects our commitment to
+quality ingredients and authentic French culinary tradition.
+</p>
+
+<p data-lang="aboutText3">
+More than just a restaurant, PAUL is a place where people come
+together to share good food, memorable moments, and the pleasure
+of authentic bakery craftsmanship.
+</p>
+
+</div>
+
+<div class="about-image">
+
+<img src="images/paul-exterior.jpg" alt="PAUL Bonapriso Restaurant">
+
+</div>
+
+</div>
+
+</section>
+
+<section id="menu" class="menu">
+
+<h2 data-lang="menuTitle">Our Menu</h2>
+
+<div class="menu-buttons">
+
+<button onclick="filterMenu('all')" data-lang="menuAll">All</button>
+<button onclick="filterMenu('viennoiserie')" data-lang="menuViennoiseries">Viennoiseries</button>
+<button onclick="filterMenu('omelette')" data-lang="menuOmelettes">Omelettes</button>
+<button onclick="filterMenu('pizza')" data-lang="menuPizzas">Pizzas</button>
+<button onclick="filterMenu('burger')" data-lang="menuBurgers">Burgers</button>
+<button onclick="filterMenu('dessert')" data-lang="menuDesserts">Desserts</button>
+
+</div>
+
+<div class="menu-container">
+
+<!-- Viennoiseries -->
+
+<div class="menu-item viennoiserie">
+<h3>Croissant au beurre</h3>
+<p>Classic French butter croissant</p>
+<span>900 FCFA</span>
+</div>
+
+<div class="menu-item viennoiserie">
+<h3>Pain au chocolat</h3>
+<p>Chocolate filled pastry</p>
+<span>1000 FCFA</span>
+</div>
+
+<div class="menu-item viennoiserie">
+<h3>Croissant aux amandes</h3>
+<p>Almond croissant with powdered sugar</p>
+<span>1800 FCFA</span>
+</div>
+
+
+<!-- Omelettes -->
+
+<div class="menu-item omelette">
+<h3>Omelette Nature</h3>
+<p>Simple classic omelette</p>
+<span>3000 FCFA</span>
+</div>
+
+<div class="menu-item omelette">
+<h3>Omelette Champignons</h3>
+<p>Omelette with mushrooms</p>
+<span>4000 FCFA</span>
+</div>
+
+<div class="menu-item omelette">
+<h3>Omelette Jambon Fromage</h3>
+<p>Omelette with ham and cheese</p>
+<span>5500 FCFA</span>
+</div>
+
+
+<!-- Pizzas -->
+
+<div class="menu-item pizza">
+<h3>Pizza Margherita</h3>
+<p>Tomato sauce and mozzarella</p>
+<span>9000 FCFA</span>
+</div>
+
+<div class="menu-item pizza">
+<h3>Pizza 3 Fromages</h3>
+<p>Three cheese pizza</p>
+<span>10000 FCFA</span>
+</div>
+
+<div class="menu-item pizza">
+<h3>Pizza Pepperoni</h3>
+<p>Pepperoni with mozzarella</p>
+<span>12000 FCFA</span>
+</div>
+
+
+<!-- Burgers -->
+
+<div class="menu-item burger">
+<h3>Classic Burger</h3>
+<p>Beef burger with fries</p>
+<span>9000 FCFA</span>
+</div>
+
+<div class="menu-item burger">
+<h3>Chicken Burger</h3>
+<p>Grilled chicken burger</p>
+<span>8500 FCFA</span>
+</div>
+
+
+<!-- Desserts -->
+
+<div class="menu-item dessert">
+<h3>Crêpe Chocolat</h3>
+<p>French crepe with chocolate</p>
+<span>3000 FCFA</span>
+</div>
+
+<div class="menu-item dessert">
+<h3>Gaufre Sucre</h3>
+<p>Belgian waffle with sugar</p>
+<span>3000 FCFA</span>
+</div>
+
+<div class="menu-item dessert">
+<h3>Cheesecake</h3>
+<p>Classic creamy cheesecake</p>
+<span>3500 FCFA</span>
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery" class="gallery">
+
+<h2 data-lang="galleryTitle">Our Gallery</h2>
+
+<p class="section-subtitle" data-lang="gallerySubtitle">
+Discover the atmosphere, flavors, and moments at PAUL Bonapriso.
+</p>
+
+<div class="gallery-container">
+
+<a href="images/gallery1.jpg" data-lightbox="restaurant">
+<img src="images/paul-interior.jpg" alt="PAUL Restaurant">
+</a>
+
+<a href="images/gallery2.jpg" data-lightbox="restaurant">
+<img src="images/breakfast.jpg" alt="French pastries">
+</a>
+
+<a href="images/gallery3.jpg" data-lightbox="restaurant">
+<img src="images/pizza.jpg" alt="Pizza dish">
+</a>
+
+<a href="images/gallery4.jpg" data-lightbox="restaurant">
+<img src="images/desserts.jpg" alt="Dessert">
+</a>
+
+<a href="images/gallery5.jpg" data-lightbox="restaurant">
+<img src="images/paul-interior1.jpg" alt="Restaurant interior">
+</a>
+
+<a href="images/gallery6.jpg" data-lightbox="restaurant">
+<img src="images/bakery.jpg" alt="Bakery display">
+</a>
+
+</div>
+
+</section>
+
+<section id="reservation" class="reservation">
+
+<div class="reservation-container">
+
+<div class="reservation-info">
+
+<h2 data-lang="reservationTitle">Reserve a Table</h2>
+
+<p data-lang="reservationText">
+Enjoy a unique dining experience at PAUL Bonapriso.
+Reserve your table and discover authentic French
+bakery specialties, delicious dishes, and a warm
+atmosphere perfect for breakfast, lunch, or dinner.
+</p>
+
+<p class="reservation-note" data-lang="reservationNote">
+We recommend booking in advance during weekends
+and special events.
+</p>
+
+</div>
+
+
+<div class="reservation-form">
+
+<form id="reservationForm">
+
+<input type="text" id="name" placeholder="Full Name" required>
+
+<input type="email" id="email" placeholder="Email Address" required>
+
+<input type="tel" id="phone" placeholder="Phone Number" required>
+
+<input type="date" id="date" required>
+
+<input type="time" id="time" required>
+
+<select id="guests" required>
+<option value="">Number of Guests</option>
+<option>1 Person</option>
+<option>2 People</option>
+<option>3 People</option>
+<option>4 People</option>
+<option>5+ People</option>
+</select>
+
+<textarea id="message" placeholder="Special Request (optional)"></textarea>
+
+<button type="submit" data-lang="reservationButton">Book a Table</button>
+
+</form>
+
+<p id="reservationSuccess" style="display:none; color:#c8a96a; font-weight:bold; margin-top:15px;" data-lang="reservationSuccessMessage">
+✅ Reservation Request Sent
+
+Thank you! Your reservation request has been sent successfully.
+
+Our team will contact you shortly to confirm your table.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2 data-lang="contactTitle">Contact Us</h2>
+
+<div class="contact-container">
+
+<div class="contact-info">
+
+<h3>PAUL Bonapriso</h3>
+
+<p data-lang="contactLocation">📍 Bonapriso, Douala, Cameroon</p>
+
+<p>📞 +237 XXX XXX XXX</p>
+
+<p>✉ info@paul-bonapriso.com</p>
+
+<p data-lang="contactHours">🕒 Open Daily</p>
+<p data-lang="contactTime">7:00 AM – 10:00 PM</p>
+
+</div>
+
+
+<div class="contact-form">
+
+<form>
+
+<input type="text" placeholder="Your Name" required data-lang="contactFormName">
+
+<input type="email" placeholder="Your Email" required data-lang="contactFormEmail">
+
+<input type="text" placeholder="Subject" data-lang="contactFormSubject">
+
+<textarea placeholder="Your Message" required data-lang="contactFormMessage"></textarea>
+
+<button type="submit" data-lang="contactFormButton">Send Message</button>
+
+</form>
+
+</div>
+
+</div>
+
+<div class="map">
+
+<iframe
+src="https://www.google.com/maps?q=Bonapriso%20Douala&output=embed"
+width="100%"
+height="300"
+style="border:0;"
+loading="lazy">
+</iframe>
+
+</div>
+
+</section>
+
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-brand">
+
+<h2 class="footer-h2">Paul Bonapriso</h2>
+
+<p data-lang="footerText">
+Authentic French bakery and restaurant offering
+fresh pastries, gourmet dishes, and a warm
+dining experience in the heart of Douala.
+</p>
+
+</div>
+
+
+<div class="footer-links">
+
+<h3 data-lang="footerLinks">Quick Links</h3>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#reservation">Reservation</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</div>
+
+
+<div class="footer-hours">
+
+<h3 data-lang="footerHours">Opening Hours</h3>
+
+<p>Mon – Fri: 7:00 AM – 10:00 PM</p>
+
+<p>Sat – Sun: 8:00 AM – 11:00 PM</p>
+
+</div>
+
+
+<div class="footer-social">
+
+<h3 data-lang="footerFollow">Follow Us</h3>
+
+<div class="social-icons">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-twitter"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<p data-lang="footerRights">
+© 2026 PAUL Bonapriso. All Rights Reserved.
+</p>
+
+</div>
+
+</footer>
+
+<a href="https://wa.me/237XXXXXXXXX" class="whatsapp" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+<button id="scrollTop">↑</button>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+emailjs.init("3NBgIXT1lFLKctIRb");
+})();
+</script>
+<script src="script.js"></script>
+<a href="#reservation" class="reserve-floating" data-lang="reservationButton">
+Reserve a Table
+</a>
+</body>
+</html>
